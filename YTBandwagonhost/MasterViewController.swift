@@ -120,6 +120,7 @@ class MasterViewController: UITableViewController {
         let key = keys[indexPath.row]
         if editingStyle == .Delete {
             UserDefault.removeObjectForKey(key)
+            KeyChain.removeObjectForKey(key)
             keys.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             refreshUsers()

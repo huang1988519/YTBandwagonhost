@@ -30,6 +30,15 @@ struct YTURL {
     static let GetServiceInfo = {
         return _baseUrl + "getServiceInfo"
     }()
+    static let Restart = {
+        return  _baseUrl + "restart"
+    }()
+    static let Start = {
+        return _baseUrl + "start"
+    }()
+    static let Stop = {
+        return _baseUrl + "stop"
+    }()
 }
 class YTNetwork {
     static  let shareInstance = YTNetwork()

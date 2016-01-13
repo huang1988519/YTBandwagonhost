@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D926C6501C4623BB007E8466 /* KYCircularProgress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D926C64F1C4623BB007E8466 /* KYCircularProgress.framework */; };
+		D926C6511C4623BB007E8466 /* KYCircularProgress.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D926C64F1C4623BB007E8466 /* KYCircularProgress.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D926C6531C46249E007E8466 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D926C6521C46249E007E8466 /* SnapKit.framework */; };
+		D926C6541C46249E007E8466 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D926C6521C46249E007E8466 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D95DA9151C463F70003C9F67 /* RectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95DA9141C463F70003C9F67 /* RectView.swift */; };
 		D9FD990C1C44E8CF0005B891 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FD990B1C44E8CF0005B891 /* AppDelegate.swift */; };
 		D9FD990E1C44E8CF0005B891 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FD990D1C44E8CF0005B891 /* MasterViewController.swift */; };
 		D9FD99101C44E8CF0005B891 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FD990F1C44E8CF0005B891 /* DetailViewController.swift */; };
@@ -27,6 +32,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				D926C6541C46249E007E8466 /* SnapKit.framework in Embed Frameworks */,
+				D926C6511C4623BB007E8466 /* KYCircularProgress.framework in Embed Frameworks */,
 				D9FD99271C44F8C40005B891 /* KeychainAccess.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -35,6 +42,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D926C64F1C4623BB007E8466 /* KYCircularProgress.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KYCircularProgress.framework; path = Carthage/Build/iOS/KYCircularProgress.framework; sourceTree = "<group>"; };
+		D926C6521C46249E007E8466 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		D95DA9141C463F70003C9F67 /* RectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectView.swift; sourceTree = "<group>"; };
 		D9FD99081C44E8CF0005B891 /* YTBandwagonhost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YTBandwagonhost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9FD990B1C44E8CF0005B891 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9FD990D1C44E8CF0005B891 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D926C6531C46249E007E8466 /* SnapKit.framework in Frameworks */,
+				D926C6501C4623BB007E8466 /* KYCircularProgress.framework in Frameworks */,
 				D9FD99261C44F8C40005B891 /* KeychainAccess.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,6 +76,8 @@
 		D9FD98FF1C44E8CF0005B891 = {
 			isa = PBXGroup;
 			children = (
+				D926C6521C46249E007E8466 /* SnapKit.framework */,
+				D926C64F1C4623BB007E8466 /* KYCircularProgress.framework */,
 				D9FD99251C44F8C40005B891 /* KeychainAccess.framework */,
 				D9FD990A1C44E8CF0005B891 /* YTBandwagonhost */,
 				D9FD99091C44E8CF0005B891 /* Products */,
@@ -91,6 +105,7 @@
 				D9FD99141C44E8CF0005B891 /* Assets.xcassets */,
 				D9FD99161C44E8CF0005B891 /* LaunchScreen.storyboard */,
 				D9FD99191C44E8CF0005B891 /* Info.plist */,
+				D95DA9141C463F70003C9F67 /* RectView.swift */,
 			);
 			path = YTBandwagonhost;
 			sourceTree = "<group>";
@@ -128,6 +143,7 @@
 				TargetAttributes = {
 					D9FD99071C44E8CF0005B891 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = GW7ZRB8ABG;
 					};
 				};
 			};
@@ -169,6 +185,7 @@
 			files = (
 				D9FD99201C44F1E60005B891 /* LoginViewController.swift in Sources */,
 				D9FD99221C44F3F10005B891 /* ABYNetwork.swift in Sources */,
+				D95DA9151C463F70003C9F67 /* RectView.swift in Sources */,
 				D9FD99101C44E8CF0005B891 /* DetailViewController.swift in Sources */,
 				D9FD990E1C44E8CF0005B891 /* MasterViewController.swift in Sources */,
 				D9FD99241C44F4850005B891 /* YTHelper.swift in Sources */,
@@ -283,6 +300,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -291,6 +309,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hwh.YTBandwagonhost;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -298,6 +317,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -306,6 +326,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hwh.YTBandwagonhost;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -328,6 +349,7 @@
 				D9FD991E1C44E8CF0005B891 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

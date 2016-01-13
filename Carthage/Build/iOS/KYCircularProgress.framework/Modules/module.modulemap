@@ -1,0 +1,10 @@
+framework module KYCircularProgress {
+  umbrella header "KYCircularProgress.h"
+
+  export *
+  module * { export * }
+}
+
+module KYCircularProgress.Swift {
+    header "KYCircularProgress-Swift.h"
+}

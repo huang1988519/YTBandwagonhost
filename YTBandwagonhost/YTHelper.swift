@@ -71,40 +71,44 @@ struct UserDefault {
 }
 
 struct KeyChain {
-    static let authenticationPrompt = "更新apikey"
+    static let authenticationPrompt = "搬瓦工助手需要使用您的TouchID验证"
     static func setObject(object: String, forKey: String) {
-        let value = keychain[forKey]
+
+        let value = try! keychain.get(forKey)
         
-        if let _ = value { //update
-            dispatch_asyn_queue({ () -> () in
-                do {
-                    try keychain.accessibility(.WhenPasscodeSetThisDeviceOnly, authenticationPolicy: .UserPresence)
-                        .authenticationPrompt(authenticationPrompt)
-                        .set(object, key: forKey)
-                } catch let error {
-                    print(error)
-                }
-            })
-            
-        }else {  //set
-            dispatch_asyn_queue { () -> () in
-                do {
-                    try keychain.accessibility(.WhenPasscodeSetThisDeviceOnly, authenticationPolicy: .UserPresence)
-                        .set(object, key: forKey)
-                }catch let error {
-                    print(error)
-                }
+        if let _ = value {
+            do {
+                try keychain.remove(forKey)
+            }catch let error {
+                print(error)
             }
         }
+        
+        dispatch_asyn_queue { () -> () in
+            do {
+                try keychain
+                    .accessibility(.WhenPasscodeSetThisDeviceOnly, authenticationPolicy: .UserPresence)
+                    .set(object, key: forKey)
+            }catch let error {
+                print(error)
+            }
+        }
+
     }
     static func objectForKey(key: String) -> String? {
         do {
-            let apiKey = try keychain.authenticationPrompt(authenticationPrompt)
-            .get(key)
+            let apiKey = try keychain.authenticationPrompt("搬瓦工需要获取touchID来自动登录").get(key)
             return apiKey
         }catch let error {
             print(error)
             return nil
+        }
+    }
+    static func removeObjectForKey(key : String) {
+        do {
+            try keychain.remove(key)
+        }catch let error {
+            print(error)
         }
     }
 }
