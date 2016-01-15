@@ -72,12 +72,6 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        var type: UIBarButtonSystemItem = .Play
-        if _suspend {
-            type = .Pause
-        }
-        let rightBarButton = UIBarButtonItem(barButtonSystemItem: type, target: self, action: nil)
-        navigationItem.rightBarButtonItem = rightBarButton
         
         self.configureView()
         bwProgress.progress  = _bw
@@ -91,8 +85,19 @@ class DetailViewController: UIViewController {
         if let ram = vpsInfo!["plan_ram"] as? Double {
             ramLabel.text = String(format: "Total: %0.0f M", ram/1024/1024)
         }
+        
     }
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let vc = segue.destinationViewController as? ExecOrderListController {
+            if let veid = _veid, let apiKey = _apiKey {
+                vc.setVeid(veid, apiKey: apiKey)
+            }
+        }
+    }
+    func setVeid(veid: String, apiKey: String) {
+        _veid = veid
+        _apiKey = apiKey
+    }
     @IBAction func restart(sender: AnyObject) {
         startRequestForState(YTURL.Restart)
     }
@@ -108,13 +113,14 @@ class DetailViewController: UIViewController {
             return
         }
         let network = YTNetwork.shareInstance
-        network.requestWithUrl(url, methed: .GET, parameters: ["veid":veid,"apikey":apikey]) {[unowned self] (data, response, error) -> Void in
+        network.requestWithUrl(url, methed: .GET, parameters: ["veid":veid,"api_key":apikey]) {[unowned self] (data, response, error) -> Void in
             guard let _ = error else {
-                print("网络错误")
+                self.showSucess("操作成功")
                 return
             }
-            let alert = AlertWithMsg("操作成功")
-            self.presentViewController(alert, animated: true, completion: nil)
+            
+            print("网络错误")
+            self.showError(error)
         }
     }
 

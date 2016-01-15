@@ -11,6 +11,7 @@ let App = UIApplication.sharedApplication().delegate as! AppDelegate
 struct  Constant{
     struct UserDefaultKey {
         static let UsersKey = "UsersKey"
+        static let ExecOrderListKey = "ExecOrderListKey"
     }
     struct NotificationKey {
         static let RefreshUsers = "RefreshUsers"

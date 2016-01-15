@@ -1,3 +1,4 @@
 github "kentya6/KYCircularProgress" "0.5.1"
 github "kishikawakatsumi/KeychainAccess" "v2.3.3"
+github "pkluz/PKHUD" "2.2.5"
 github "SnapKit/SnapKit" "0.18.0"
