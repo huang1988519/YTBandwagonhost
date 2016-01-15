@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import KYCircularProgress
 import SnapKit
 
 class DetailViewController: UIViewController {

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import PKHUD
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var veidTf: UITextField!
@@ -20,17 +20,25 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         let colorfulPlaceHolder = NSAttributedString(string: veidTf.placeholder ?? "", attributes: [NSForegroundColorAttributeName: placeColor])
+        let colorfulApiKeyPlaceHolder = NSAttributedString(string: apiKeyTf.placeholder ?? "", attributes: [NSForegroundColorAttributeName: placeColor])
+
         veidTf.attributedPlaceholder = colorfulPlaceHolder
-        apiKeyTf.attributedPlaceholder = colorfulPlaceHolder
+        apiKeyTf.attributedPlaceholder = colorfulApiKeyPlaceHolder
     }
 
     //MARK: - Methed
     @IBAction func login(sender: AnyObject) {
-        guard let _veid = veidTf.text  ,let _apikey = apiKeyTf.text else{
+        guard let _veid = veidTf.text ,let _apikey = apiKeyTf.text  else{
             let alert = AlertWithMsg("请检查 veid 和 api key 是否输入正确")
             self.presentViewController(alert, animated: true, completion: nil)
             return
         }
+        if _veid.isEmpty || _apikey.isEmpty {
+            let alert = AlertWithMsg("请检查 veid 和 api key 是否输入正确")
+            self.presentViewController(alert, animated: true, completion: nil)
+            return
+        }
+        
         showHud()
         let network = YTNetwork.shareInstance
         network.requestWithUrl(YTURL.GetServiceInfo, methed: .GET, parameters: ["veid":_veid,"api_key":_apikey]) { [unowned self](data, response, error) -> Void in
@@ -38,7 +46,7 @@ class LoginViewController: UIViewController {
             
             if let _ = error {
                 self.showError()
-                let alert = AlertWithMsg(error!.localizedDescription)
+                let alert = AlertWithMsg("\(error!.userInfo)")
                 self.presentViewController(alert, animated: true, completion: nil)
                 return 
             }

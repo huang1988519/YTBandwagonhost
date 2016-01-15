@@ -94,6 +94,11 @@ class YTNetwork {
                 print("网络返回结果解析错误")
                 return
             }
+            guard let errorCode = jsonData!["error"] as? NSInteger where errorCode == 0 else {
+                let errorMsg = jsonData!["message"] as? String
+                aybError = NSError(domain: "com.yt", code: YTNetworkCode.YT_Error.rawValue, userInfo: ["error":(errorMsg ?? "请求错误")])
+                return
+            }
             if networkDebug {
                 print("\n------ Request Response ------\n\(jsonData)\n\n")
             }

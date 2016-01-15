@@ -20,6 +20,7 @@ class MasterViewController: UITableViewController {
             keys = allKeys
         }
     }
+    
     private var keys:[String] = [String]()
 
     override func viewDidLoad() {

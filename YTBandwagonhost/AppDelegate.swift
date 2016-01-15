@@ -8,6 +8,8 @@
 
 import UIKit
 import KeychainAccess
+//import Fabric
+//import Crashlytics
 
 let keychain = Keychain(service: "com.yt.YTBandwagonhost")
 
@@ -16,9 +18,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     var window: UIWindow?
 
-
+    func config() {
+        CrashReporter.sharedInstance().enableLog(true)
+        CrashReporter.sharedInstance().installWithAppId("900017962")
+        
+        //配置 fabric 统计
+//        Fabric.with([Crashlytics.self])
+    }
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        config()
+        
         let splitViewController = self.window!.rootViewController as! UISplitViewController
         let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
         navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()

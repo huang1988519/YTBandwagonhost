@@ -62,13 +62,16 @@ class ExecOrderListController: UIViewController {
             execHeightConstaint.constant = 0
         }
         view.bringSubviewToFront(tableView)
-        view.layoutIfNeeded()
+        UIView.animateWithDuration(0.18) { () -> Void in
+            self.view.layoutIfNeeded()
+        }
     }
     @IBAction func perform(sender: AnyObject?) {
         self.view.endEditing(true)
         showHistory(false)
         
         guard let command =  textView.text ,let veid = _veid, let apiKey = _apiKey else {
+            
             showError("输入命令或者参数异常")
             return
         }
