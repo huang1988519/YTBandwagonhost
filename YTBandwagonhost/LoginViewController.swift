@@ -12,7 +12,6 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var veidTf: UITextField!
     @IBOutlet weak var apiKeyTf: UITextField!
-    
     private let placeColor = UIColor(white: 0.8, alpha: 0.8)
 
     //MARK: - Cycle
@@ -71,5 +70,11 @@ class LoginViewController: UIViewController {
         
         NSNotificationCenter.defaultCenter().postNotificationName(Constant.NotificationKey.RefreshUsers, object: nil)
         cancel(nil)
+    }
+}
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
