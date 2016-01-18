@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import PKHUD
+//import PKHUD
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var veidTf: UITextField!

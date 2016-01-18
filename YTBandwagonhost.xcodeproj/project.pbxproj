@@ -16,14 +16,13 @@
 		D9DA2B9C1C48C4F8007450AC /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DA2B9B1C48C4F8007450AC /* libz.tbd */; };
 		D9DA2B9E1C48C504007450AC /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DA2B9D1C48C504007450AC /* libc++.tbd */; };
 		D9DA2BA01C48C50C007450AC /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DA2B9F1C48C50C007450AC /* JavaScriptCore.framework */; };
-		D9DA2BB81C48F09F007450AC /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DA2BB61C48F09F007450AC /* KeychainAccess.framework */; };
-		D9DA2BB91C48F09F007450AC /* KeychainAccess.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D9DA2BB61C48F09F007450AC /* KeychainAccess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D9DA2BBA1C48F09F007450AC /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DA2BB71C48F09F007450AC /* SnapKit.framework */; };
-		D9DA2BBB1C48F09F007450AC /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D9DA2BB71C48F09F007450AC /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D9DA2BBD1C48F197007450AC /* PKHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DA2BBC1C48F197007450AC /* PKHUD.framework */; };
-		D9DA2BBF1C48F1A1007450AC /* UIViewController+Extent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DA2BBE1C48F1A1007450AC /* UIViewController+Extent.swift */; };
-		D9DA2BC11C490E27007450AC /* PKHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DA2BC01C490E27007450AC /* PKHUD.framework */; };
-		D9DA2BC21C490E27007450AC /* PKHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D9DA2BC01C490E27007450AC /* PKHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D9DA2BD11C4CC40E007450AC /* UIViewController+Extent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DA2BD01C4CC40E007450AC /* UIViewController+Extent.swift */; };
+		D9DA2BD51C4CC687007450AC /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DA2BD21C4CC687007450AC /* KeychainAccess.framework */; };
+		D9DA2BD61C4CC687007450AC /* KeychainAccess.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D9DA2BD21C4CC687007450AC /* KeychainAccess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D9DA2BD71C4CC687007450AC /* PKHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DA2BD31C4CC687007450AC /* PKHUD.framework */; };
+		D9DA2BD81C4CC687007450AC /* PKHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D9DA2BD31C4CC687007450AC /* PKHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D9DA2BD91C4CC687007450AC /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DA2BD41C4CC687007450AC /* SnapKit.framework */; };
+		D9DA2BDA1C4CC687007450AC /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D9DA2BD41C4CC687007450AC /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D9FD990C1C44E8CF0005B891 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FD990B1C44E8CF0005B891 /* AppDelegate.swift */; };
 		D9FD990E1C44E8CF0005B891 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FD990D1C44E8CF0005B891 /* MasterViewController.swift */; };
 		D9FD99101C44E8CF0005B891 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FD990F1C44E8CF0005B891 /* DetailViewController.swift */; };
@@ -42,9 +41,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D9DA2BC21C490E27007450AC /* PKHUD.framework in Embed Frameworks */,
-				D9DA2BB91C48F09F007450AC /* KeychainAccess.framework in Embed Frameworks */,
-				D9DA2BBB1C48F09F007450AC /* SnapKit.framework in Embed Frameworks */,
+				D9DA2BDA1C4CC687007450AC /* SnapKit.framework in Embed Frameworks */,
+				D9DA2BD61C4CC687007450AC /* KeychainAccess.framework in Embed Frameworks */,
+				D9DA2BD81C4CC687007450AC /* PKHUD.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,11 +61,10 @@
 		D9DA2B9B1C48C4F8007450AC /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		D9DA2B9D1C48C504007450AC /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		D9DA2B9F1C48C50C007450AC /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		D9DA2BB61C48F09F007450AC /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
-		D9DA2BB71C48F09F007450AC /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
-		D9DA2BBC1C48F197007450AC /* PKHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PKHUD.framework; path = Carthage/Build/iOS/PKHUD.framework; sourceTree = "<group>"; };
-		D9DA2BBE1C48F1A1007450AC /* UIViewController+Extent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extent.swift"; sourceTree = "<group>"; };
-		D9DA2BC01C490E27007450AC /* PKHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PKHUD.framework; path = Carthage/Build/iOS/PKHUD.framework; sourceTree = "<group>"; };
+		D9DA2BD01C4CC40E007450AC /* UIViewController+Extent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extent.swift"; sourceTree = "<group>"; };
+		D9DA2BD21C4CC687007450AC /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
+		D9DA2BD31C4CC687007450AC /* PKHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PKHUD.framework; path = Carthage/Build/iOS/PKHUD.framework; sourceTree = "<group>"; };
+		D9DA2BD41C4CC687007450AC /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		D9FD99081C44E8CF0005B891 /* YTBandwagonhost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YTBandwagonhost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9FD990B1C44E8CF0005B891 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9FD990D1C44E8CF0005B891 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -85,16 +83,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9DA2BBD1C48F197007450AC /* PKHUD.framework in Frameworks */,
-				D9DA2BC11C490E27007450AC /* PKHUD.framework in Frameworks */,
+				D9DA2BD91C4CC687007450AC /* SnapKit.framework in Frameworks */,
 				D9DA2BA01C48C50C007450AC /* JavaScriptCore.framework in Frameworks */,
 				D9DA2B9E1C48C504007450AC /* libc++.tbd in Frameworks */,
 				D9DA2B9C1C48C4F8007450AC /* libz.tbd in Frameworks */,
-				D9DA2BB81C48F09F007450AC /* KeychainAccess.framework in Frameworks */,
+				D9DA2BD51C4CC687007450AC /* KeychainAccess.framework in Frameworks */,
 				D9DA2B9A1C48C4F0007450AC /* Security.framework in Frameworks */,
 				D9DA2B981C48C4E1007450AC /* SystemConfiguration.framework in Frameworks */,
 				D9DA2B921C48C41F007450AC /* Bugly.framework in Frameworks */,
-				D9DA2BBA1C48F09F007450AC /* SnapKit.framework in Frameworks */,
+				D9DA2BD71C4CC687007450AC /* PKHUD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,10 +101,9 @@
 		D9FD98FF1C44E8CF0005B891 = {
 			isa = PBXGroup;
 			children = (
-				D9DA2BC01C490E27007450AC /* PKHUD.framework */,
-				D9DA2BBC1C48F197007450AC /* PKHUD.framework */,
-				D9DA2BB61C48F09F007450AC /* KeychainAccess.framework */,
-				D9DA2BB71C48F09F007450AC /* SnapKit.framework */,
+				D9DA2BD21C4CC687007450AC /* KeychainAccess.framework */,
+				D9DA2BD31C4CC687007450AC /* PKHUD.framework */,
+				D9DA2BD41C4CC687007450AC /* SnapKit.framework */,
 				D9DA2B9F1C48C50C007450AC /* JavaScriptCore.framework */,
 				D9DA2B9D1C48C504007450AC /* libc++.tbd */,
 				D9DA2B9B1C48C4F8007450AC /* libz.tbd */,
@@ -143,8 +139,8 @@
 				D9FD99191C44E8CF0005B891 /* Info.plist */,
 				D95DA9141C463F70003C9F67 /* RectView.swift */,
 				D9DA2B8D1C479BD0007450AC /* UITextView+Extent.swift */,
+				D9DA2BD01C4CC40E007450AC /* UIViewController+Extent.swift */,
 				D9DA2B931C48C45D007450AC /* YTBandwagonhost-Bridging-Header.h */,
-				D9DA2BBE1C48F1A1007450AC /* UIViewController+Extent.swift */,
 			);
 			path = YTBandwagonhost;
 			sourceTree = "<group>";
@@ -160,6 +156,7 @@
 				D9FD99051C44E8CF0005B891 /* Frameworks */,
 				D9FD99061C44E8CF0005B891 /* Resources */,
 				D9FD99281C44F8C40005B891 /* Embed Frameworks */,
+				D9DA2BDB1C4CC77E007450AC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -217,6 +214,25 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D9DA2BDB1C4CC77E007450AC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/PKHUD.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D9FD99041C44E8CF0005B891 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -228,7 +244,7 @@
 				D95DA9151C463F70003C9F67 /* RectView.swift in Sources */,
 				D9DA2B8E1C479BD0007450AC /* UITextView+Extent.swift in Sources */,
 				D9FD99101C44E8CF0005B891 /* DetailViewController.swift in Sources */,
-				D9DA2BBF1C48F1A1007450AC /* UIViewController+Extent.swift in Sources */,
+				D9DA2BD11C4CC40E007450AC /* UIViewController+Extent.swift in Sources */,
 				D9FD990E1C44E8CF0005B891 /* MasterViewController.swift in Sources */,
 				D9FD99241C44F4850005B891 /* YTHelper.swift in Sources */,
 				D9FD990C1C44E8CF0005B891 /* AppDelegate.swift in Sources */,
@@ -344,6 +360,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -354,6 +371,7 @@
 				INFOPLIST_FILE = YTBandwagonhost/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hwh.YTBandwagonhost;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "a3a9f1e0-d9a1-4955-9e19-b3a6c6f19ab6";
@@ -369,6 +387,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Jiabin Li (GW7ZRB8ABG)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jiabin Li (GW7ZRB8ABG)";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -379,6 +398,7 @@
 				INFOPLIST_FILE = YTBandwagonhost/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hwh.YTBandwagonhost;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "a3a9f1e0-d9a1-4955-9e19-b3a6c6f19ab6";
